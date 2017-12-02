@@ -11,8 +11,8 @@ class CashRegister
 
   def add_item(title, price, quantity = 1)
     @items.fill(title, @items.size, quantity)
-    @most_recent_price = (price * quantity)
-    @total += @most_recent_price
+    @last_transaction = (price * quantity)
+    @total += @last_transaction
   end
 
   def apply_discount

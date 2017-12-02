@@ -3,7 +3,7 @@ require 'pry'
 class CashRegister
   attr_accessor :items, :total, :discount, :last_transaction
 
-  def initialize(discount = nil)
+  def initialize(discount = 0)
     @total = 0
     @items = []
     @discount = discount
@@ -16,7 +16,7 @@ class CashRegister
   end
 
   def apply_discount
-    if @discount == nil
+    if @discount == 0
       "There is no discount to apply."
     else @total = @total * (100 - @discount) / 100
       "After the discount, the total comes to $#{@total}."

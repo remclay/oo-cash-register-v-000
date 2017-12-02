@@ -10,7 +10,7 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    @title.fill(title, @title.size, quantity)
+    @items.fill(title, @items.size, quantity)
     @most_recent_price = (price * quantity)
     @total += @most_recent_price
   end
